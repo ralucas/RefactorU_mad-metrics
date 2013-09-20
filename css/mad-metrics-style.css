@@ -2,29 +2,218 @@
 	max-height: 100%;
 	max-width: 100%;
 }
+#topBanner {
+	padding: 5px;
+	margin: 10px 5px;
+	font-size: 32px;
+	text-align: center;
+	background-color: cadetblue;
+	border-radius: 6px;
+}
 
-#target {
+#metricButton {
+	position: fixed;
+	background: papayawhip;
+	height: 50px;
+	width: 100px;
+	right:5px;
+	top: 5px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0px 0px 50px black;
+	/*border-style: groove;*/
+	display: table;
+}
+
+#metricButton:hover {
+	background: rgba0, 0, 0);
+	box-shadow: 0px 0px 20px green;
+	/*border-style: groove;*/
+
+}
+
+#signUpButton {
+	position: fixed;
+	background: rgb(180, 180, 120);
+	height: 50px;
+	width: 100px;
+	right:140px;
+	top: 5px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0px 0px 50px black;
+	/*border-style: groove;*/
+	display: table;
+}
+
+#signUpButton:hover {
+	background: rgb(200, 20, 120,);
+	box-shadow: 0px 0px 20px cadetblue;
+	/*border-style: groove;*/
+}
+
+#littleSquare {
+	display: inline-block;
 	height: 200px;
 	width: 200px;
 	background-color: red;
 }
 
 #square {
-	height: 300px;
-	width: 300px;
-	background-color: peachpuff;
+	display: inline-block;
+	padding-right: 10px;
+	height: 350px;
+	width: 73%;
+	background-image: url('http://www.kouponkaren.com/wp-content/uploads/2012/02/coffee-set.jpg');
+	box-shadow: 2px 2px 20px grey;
+	border-radius: 20px;
+	margin-left: 25px;
+	-webkit-transition: 0.5s;
+	margin-bottom: 25px;
+}
+
+#square:hover {
+	box-shadow: 2px 2px 20px black;
+	-webkit-transition: 0.5s;
 }
 
 #circle {
 	height: 300px;
 	width: 300px;
 	border-radius: 300px;
-	background-color: green;
+	background-image: url('http://stockfresh.com/files/t/tiero/m/13/436803_stock-photo-funny-portrait-of-man-inside-washing-machine.jpg');
+	border-style: outset inset;
+	box-shadow: 0px 0px 20px grey;
+	margin-left:1%;
+	margin-right:25px;
+	-webkit-transition: 0.5s;
+	float:left;
+	overflow: auto;
 }
 
-#fancySquare {
-	height: 300px;
-	width: 300px;
-	border-radius: 60px;
+#circle:hover {
 	box-shadow: 0px 0px 20px black;
+	-webkit-transition: 0.5s;
 }
+
+.reusableButton {
+	background: rgba(200, 20, 120, 0.1);
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0px 0px 50px black;
+	/*border-style: groove;*/
+	display: table;
+}
+
+.close-button:hover {
+	background: rgba(200, 20, 120, .6);
+	box-shadow: 0px 0px 20px cadetblue;
+}
+
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.background-box {
+	position: absolute;
+	background-color: black;
+	opacity: .8;
+	top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.info-box {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	background-color: white;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+  	padding: 15px;
+  	border-radius: 6px;
+	z-index: 2;
+}
+
+.close-button {
+	float: right;
+	text-align: center;
+	background-color: salmon;
+	border-radius: 6px;
+	color: white;
+}
+
+.compTitle {
+	font-family: sans-serif;
+}
+
+#navBar {
+	float: left;
+	overflow: hidden;
+	width: 23%;
+}
+
+#navList {
+	padding: 10px 5px;
+	border: thin solid black;
+	margin-right: 5px;
+	background-color: silver;
+}
+
+.navItem {
+	list-style: none;
+	padding: 7px 5px;
+	margin-right: 5px;
+}
+
+.navItem a {
+	text-decoration: none;
+	font-size: 24px;
+	font-family: sans-serif;
+}
+
+#firstText, #secondText {
+	text-indent: 15px;
+}
+
+.aboutUsImg {
+	border-radius: 100px;
+}
+
+.aboutUsImgTxt {
+	text-indent: 15px;
+	text-align: justify;
+	display: inline-block;
+	padding: 10px;
+	width: 25%;
+	height: 300px;
+	border: thin dashed black;
+
+}
+
+#aboutUs {
+	margin-top: 10px;
+	padding: 100px;
+	max-width: 90%;
+	clear:both;
+	overflow: auto;
+	position: relative;
+}
+ h3 {
+ 	text-align: center;
+ }
+
+
+
+
+
