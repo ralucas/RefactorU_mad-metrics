@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-// Mouse tracking (has log function on page)
+// Mouse tracking heatmap?(has log function on page)
 //
 // $("body").mousemove(function(event) {
 //   var msg = "Handler for .mousemove() called at ";
@@ -21,15 +21,40 @@ var winViewPercent;
 var scrollPercent; 
 var scrollPercentRounded; 
 var pageViewPercent; 
-$(window).scroll(function(e){
-		 scrollTop = $(window).scrollTop(); //Total distance scrolled
+var maxScroll = 0;
+var addScroll = 0;
+var totalScroll = 0;
+var minScroll = 0;
+var botScroll = 0;
+var xScroll = 0;
+var minBotBound = 0
+
+
+$(window).scroll(function(){
+		 scrollTop = $(window).scrollTop(); // distance scrolled from top
 		 scrollDoc = $(document).scrollTop();
 		 docHeight = $(document).height();
 		 winHeight = $(window).height();
+		 botScroll = docHeight - winHeight;
 		 winViewPercent = (1-(docHeight-winHeight)/docHeight)
 		 scrollPercent = ((scrollTop) / (docHeight - winHeight) * 100);
-		 scrollPercentRounded = (Math.round(scrollPercent*100)/100);
-		 pageViewPercent =  winViewPercent + (scrollDoc / docHeight)
+		 scrollPercentRounded = (Math.round(scrollPercent));
+		 pageViewPercent =  winViewPercent + (scrollTop / docHeight)
+
+		 minBotBound =  scrollTop + winHeight;    // when = docHeight - maximum amount scrolled
+
+			if(scrollPercent>maxScroll){
+				maxScroll = scrollPercent
+			};
+		addScroll += (scrollTop-addScroll);
+			if(addScroll>scrollTop){
+				totalScroll = addScroll
+			} 
+			if(scrollPercent = maxScroll){
+				xScroll = scrollTop    
+			};
+
+
 
 
 		console.log("scrollTop", scrollTop)
@@ -38,6 +63,13 @@ $(window).scroll(function(e){
 		console.log('docHeight', docHeight)
 		console.log('scrollDoc', scrollDoc)
 		console.log('pageViewPercent', pageViewPercent)
+		console.log('winViewPercent', winViewPercent)
+		console.log('scrollPercent', scrollPercent) //additive variable
+		console.log('maxScroll', maxScroll)
+		console.log('addScroll', addScroll)
+		console.log('botScroll', botScroll)
+		console.log('xScroll', xScroll)
+		console.log('totalScroll', totalScroll)
 	});
 
 //
