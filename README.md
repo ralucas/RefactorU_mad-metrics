@@ -1,10 +1,3 @@
 RefactorU_mad-metrics
 =====================
-$(this).on('mouseenter', function (){
-		elementTimeEnter = new Date().getTime();
-	}).on('mouseleave', function(){
-		elementTimeLeave = new Date().getTime();
-		elementTimeDiff = elementTimeLeave - elementTimeEnter;
-		
-		return elementTimeDiff;
-	});
+Current Mad-metrics project - no bonus finished.  Pair programming with Deb Zapata, Rob Camp, and Richard Lucas.

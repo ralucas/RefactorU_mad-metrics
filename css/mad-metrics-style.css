@@ -198,3 +198,23 @@
 .divSection1, .divSection2, .bigDiv {
 	margin:10px;
 }
+
+/*Table CSS*/
+
+table{
+	width: 100%;
+}
+
+th, td{
+	border-bottom: 1px solid #c6c9cc;
+	width: 40px;
+	padding: 10px;
+}
+
+tr td:first-child, table tr th:first-child{
+	width: 5px;
+}
+
+tr:last-child{
+	border: 0;
+}
